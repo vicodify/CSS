@@ -1,0 +1,22 @@
+h1{
+    text-align: center;
+    font-weight: 900;
+}
+
+h2{
+    text-align: center;
+    font-weight: 200;
+}
+
+h3{
+    text-align: justify;
+    font-weight: bolder;
+}
+
+p{
+    font-weight: bold;
+}
+
+ol{
+    font-weight: 600;
+}
