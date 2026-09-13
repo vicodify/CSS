@@ -1,0 +1,29 @@
+h1{
+    text-align: center;
+    text-decoration: red underline;
+}
+
+p{
+    text-align: center;
+    text-decoration: underline;
+}
+
+h2{
+    text-align: center;
+    text-decoration: overline;
+}
+
+h3{
+    text-align: justify;
+    text-decoration: line-through;
+}
+
+ul{
+    text-align: left;
+    text-decoration: red underline;
+}
+
+ol{
+    text-align: left;
+    text-decoration: wavy overline;
+}
