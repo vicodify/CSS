@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #fff9f8;
+    color: #4b3038;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background-color: #fff;
+}
+
+header h1 {
+    font-size: 27px;
+    color: #b34d72;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4b3038;
+    margin-left: 25px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d66b91;
+}
+
+/* Hero Section */
+
+.hero {
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    background: linear-gradient(135deg, #fce4ec, #fff1e6);
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.subtitle {
+    color: #b34d72;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 65px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero h2 span {
+    color: #c45b83;
+    font-style: italic;
+}
+
+.hero-content > p:not(.subtitle) {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #755963;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #b34d72;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #8f3456;
+    transform: translateY(-3px);
+}
+
+/* Flower Collection */
+
+.flowers {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.flowers h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #8f3456;
+}
+
+.section-desc {
+    color: #94717c;
+    margin-bottom: 40px;
+}
+
+.flower-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.flower-card {
+    width: 280px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(179, 77, 114, 0.1);
+    transition: 0.3s;
+}
+
+.flower-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(179, 77, 114, 0.2);
+}
+
+.flower-image {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 85px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.rose {
+    background-color: #fde2e9;
+}
+
+.tulip {
+    background-color: #fce8f2;
+}
+
+.sunflower {
+    background-color: #fff1c9;
+}
+
+.flower-card h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.flower-card p {
+    color: #94717c;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.flower-card span {
+    color: #b34d72;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* About Section */
+
+.about {
+    padding: 70px 10%;
+    text-align: center;
+    background-color: #fce8ed;
+}
+
+.about h2 {
+    font-size: 32px;
+    color: #8f3456;
+    margin-bottom: 25px;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.9;
+    color: #755963;
+    font-size: 17px;
+}
+
+/* Quote Section */
+
+.quote {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.quote h2 {
+    font-size: 28px;
+    color: #b34d72;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.quote p {
+    color: #94717c;
+}
+
+/* Footer */
+
+footer {
+    background-color: #4b3038;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    line-height: 2;
+}
+
+footer h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #f0dce3;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 60px 7%;
+    }
+
+    .hero h2 {
+        font-size: 48px;
+    }
+
+    .flowers h2 {
+        font-size: 29px;
+    }
+
+    .quote h2 {
+        font-size: 23px;
+    }
+}
