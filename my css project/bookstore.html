@@ -1,0 +1,265 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter & Co. | Bookstore</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background-color: #f8f4ed;
+            color: #342b25;
+        }
+
+        header {
+            background: #45352e;
+            color: #fff8ed;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 27px;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: #fff8ed;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        .hero {
+            min-height: 430px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 10%;
+            gap: 40px;
+        }
+
+        .hero-text {
+            max-width: 500px;
+        }
+
+        .hero h2 {
+            font-size: 52px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #76675b;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .hero button {
+            background: #8a5b43;
+            border: none;
+            color: white;
+            padding: 14px 28px;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .hero img {
+            width: 300px;
+            height: 330px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 12px 12px 0 #d9c8b5;
+        }
+
+        .books {
+            padding: 55px 8%;
+            text-align: center;
+            background: #eee5d9;
+        }
+
+        .books h2 {
+            font-size: 35px;
+            margin-bottom: 35px;
+        }
+
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .book {
+            background: #fffaf3;
+            padding: 18px;
+            border-radius: 10px;
+            width: 220px;
+            transition: transform 0.3s;
+        }
+
+        .book:hover {
+            transform: translateY(-8px);
+        }
+
+        .book img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .book h3 {
+            margin: 15px 0 8px;
+        }
+
+        .book p {
+            color: #92745f;
+            font-size: 14px;
+        }
+
+        .newsletter {
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+        .newsletter h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .newsletter p {
+            margin-bottom: 20px;
+            color: #76675b;
+        }
+
+        .newsletter input {
+            padding: 13px;
+            width: 250px;
+            border: 1px solid #b9a693;
+            border-radius: 5px;
+        }
+
+        .newsletter button {
+            padding: 13px 20px;
+            border: none;
+            background: #45352e;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #45352e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h2 {
+                font-size: 38px;
+            }
+
+            .hero img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Chapter & Co.</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#books">Books</a>
+            <a href="#newsletter">Subscribe</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Every book is a new adventure.</h2>
+            <p>
+                Discover stories that stay with you forever.
+                Find your next favorite book and escape into
+                a world of imagination.
+            </p>
+            <button onclick="location.href='#books'">
+                Explore Books
+            </button>
+        </div>
+
+        <img
+            src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600"
+            alt="Books stacked on a table"
+        >
+    </section>
+
+    <section class="books" id="books">
+        <h2>Our Book Collection</h2>
+
+        <div class="book-container">
+            <div class="book">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400" alt="Book collection">
+                <h3>Classic Tales</h3>
+                <p>Stories from another era</p>
+            </div>
+
+            <div class="book">
+                <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=400" alt="Open book">
+                <h3>Midnight Reads</h3>
+                <p>For late-night readers</p>
+            </div>
+
+            <div class="book">
+                <img src="https://images.unsplash.com/photo-1513001900722-370f803f498d?w=400" alt="Books and coffee">
+                <h3>Cozy Corners</h3>
+                <p>Books for peaceful days</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter" id="newsletter">
+        <h2>Join Our Reading Club</h2>
+        <p>Get inspired with stories, reading tips and updates.</p>
+
+        <form onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 Chapter & Co. | Made for book lovers.</p>
+    </footer>
+
+</body>
+</html>
+```
