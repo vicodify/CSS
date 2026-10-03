@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibeify | Your Mood, Your Music</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #44315e);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: #ffb6d9;
+        }
+
+        p {
+            color: #ddd;
+            font-size: 18px;
+        }
+
+        .buttons {
+            margin: 30px 0;
+        }
+
+        button {
+            background: #ffb6d9;
+            color: #292038;
+            border: none;
+            padding: 12px 20px;
+            margin: 8px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ff8fc5;
+            transform: scale(1.05);
+        }
+
+        #recommendation {
+            background: rgba(255, 255, 255, 0.1);
+            max-width: 400px;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 20px;
+            min-height: 120px;
+        }
+
+        .song {
+            font-size: 20px;
+            margin: 15px 0;
+        }
+
+        footer {
+            margin-top: 50px;
+            color: #bbb;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🎧 Vibeify</h1>
+    <p>Your mood, your music. ✨</p>
+    <p>How are you feeling today?</p>
+
+    <div class="buttons">
+        <button onclick="recommend('happy')">☀️ Happy</button>
+        <button onclick="recommend('sad')">🌧️ Melancholic</button>
+        <button onclick="recommend('chill')">🌙 Chill</button>
+        <button onclick="recommend('focus')">📚 Focus</button>
+    </div>
+
+    <div id="recommendation">
+        <h2>Pick your mood!</h2>
+        <p>Your playlist is waiting for you. 💗</p>
+    </div>
+
+    <script>
+        const songs = {
+            happy: [
+                "Golden - Harry Styles",
+                "Levitating - Dua Lipa",
+                "Espresso - Sabrina Carpenter"
+            ],
+
+            sad: [
+                "The Night We Met - Lord Huron",
+                "Heather - Conan Gray",
+                "Another Love - Tom Odell"
+            ],
+
+            chill: [
+                "Sunflower - Post Malone",
+                "Snooze - SZA",
+                "Until I Found You - Stephen Sanchez"
+            ],
+
+            focus: [
+                "Experience - Ludovico Einaudi",
+                "Nuvole Bianche - Ludovico Einaudi",
+                "Weightless - Marconi Union"
+            ]
+        };
+
+        function recommend(mood) {
+            const playlist = songs[mood];
+
+            let output = `<h2>Your ${mood} playlist 🎶</h2>`;
+
+            playlist.forEach(song => {
+                output += `<div class="song">🎵 ${song}</div>`;
+            });
+
+            document.getElementById("recommendation").innerHTML = output;
+        }
+    </script>
+
+    <footer>
+        Made with 💗 and music | Vibeify © 2026
+    </footer>
+
+</body>
+</html>
