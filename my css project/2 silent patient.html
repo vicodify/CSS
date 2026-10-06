@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Silent Patient</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            background-color: #171613;
+            color: #d6cec0;
+            line-height: 1.7;
+        }
+
+
+        /* ---------- HEADER ---------- */
+
+        header {
+            height: 520px;
+
+            background:
+                linear-gradient(
+                    rgba(18, 17, 14, 0.75),
+                    rgba(18, 17, 14, 0.95)
+                ),
+                url("https://images.unsplash.com/photo-1516979187457-637abb4f9353");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            padding: 30px;
+        }
+
+
+        header h1 {
+            margin: 0;
+
+            font-size: 65px;
+            font-weight: normal;
+
+            letter-spacing: 8px;
+
+            color: #e4dccd;
+        }
+
+
+        header p {
+            margin-top: 20px;
+
+            color: #aaa293;
+
+            font-size: 19px;
+            font-style: italic;
+
+            letter-spacing: 2px;
+        }
+
+
+        .header-line {
+            width: 90px;
+            height: 1px;
+
+            background-color: #aaa293;
+
+            margin: 25px 0;
+        }
+
+
+        /* ---------- MAIN ---------- */
+
+        .container {
+            max-width: 950px;
+
+            margin: auto;
+
+            padding: 70px 30px;
+        }
+
+
+        /* ---------- BOOK INTRO ---------- */
+
+        .book-section {
+            display: flex;
+
+            align-items: center;
+
+            gap: 55px;
+
+            margin-bottom: 70px;
+        }
+
+
+        .book-cover {
+            width: 220px;
+            height: 330px;
+
+            flex-shrink: 0;
+
+            background:
+                linear-gradient(
+                    rgba(35, 33, 27, 0.65),
+                    rgba(20, 19, 16, 0.9)
+                ),
+                url("https://images.unsplash.com/photo-1543002588-bfa74002ed7e");
+
+            background-size: cover;
+            background-position: center;
+
+            border: 1px solid #77705f;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            box-shadow:
+                12px 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+
+        .book-cover h2 {
+            font-size: 28px;
+
+            font-weight: normal;
+
+            letter-spacing: 4px;
+
+            color: #e1d8c8;
+        }
+
+
+        .book-description h2 {
+            font-size: 34px;
+
+            font-weight: normal;
+
+            color: #ded4c3;
+        }
+
+
+        .book-description p {
+            color: #aaa293;
+        }
+
+
+        /* ---------- DIVIDER ---------- */
+
+        .divider {
+            width: 100%;
+
+            height: 1px;
+
+            background-color: #39372f;
+
+            margin: 60px 0;
+        }
+
+
+        /* ---------- QUOTE ---------- */
+
+        .quote {
+            text-align: center;
+
+            padding: 45px 25px;
+
+            margin: 50px 0;
+
+            background-color: #211f1b;
+
+            border-top: 1px solid #3b3931;
+            border-bottom: 1px solid #3b3931;
+        }
+
+
+        .quote p {
+            font-size: 25px;
+
+            font-style: italic;
+
+            color: #cbc2b2;
+        }
+
+
+        .quote span {
+            display: block;
+
+            margin-top: 15px;
+
+            font-size: 12px;
+
+            letter-spacing: 3px;
+
+            color: #817b70;
+        }
+
+
+        /* ---------- HEADINGS ---------- */
+
+        section h2 {
+            font-size: 32px;
+
+            font-weight: normal;
+
+            letter-spacing: 2px;
+
+            color: #ded4c3;
+        }
+
+
+        /* ---------- ABOUT ---------- */
+
+        .about p {
+            color: #aaa293;
+
+            font-size: 16px;
+        }
+
+
+        /* ---------- CHARACTERS ---------- */
+
+        .characters {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+            margin-top: 30px;
+        }
+
+
+        .character {
+            background-color: #211f1b;
+
+            padding: 25px;
+
+            border: 1px solid #34322c;
+
+            transition: 0.3s;
+        }
+
+
+        .character:hover {
+            transform: translateY(-6px);
+
+            background-color: #28261f;
+
+            border-color: #77705f;
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.25);
+        }
+
+
+        .character h3 {
+            color: #c9bda9;
+
+            font-size: 20px;
+
+            font-weight: normal;
+        }
+
+
+        .character p {
+            color: #938d82;
+
+            font-size: 15px;
+        }
+
+
+        /* ---------- THEMES ---------- */
+
+        .themes {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 25px;
+        }
+
+
+        .theme {
+            padding: 8px 18px;
+
+            border: 1px solid #555044;
+
+            color: #aaa293;
+
+            font-size: 14px;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* ---------- MYSTERY BOX ---------- */
+
+        .mystery {
+            margin-top: 70px;
+
+            padding: 50px;
+
+            text-align: center;
+
+            background-color: #1d1c18;
+
+            border: 1px solid #454238;
+        }
+
+
+        .mystery h2 {
+            letter-spacing: 5px;
+        }
+
+
+        .mystery p {
+            color: #9e978a;
+
+            font-size: 17px;
+        }
+
+
+        .mystery .question {
+            margin-top: 30px;
+
+            color: #c9bda9;
+
+            font-size: 20px;
+
+            font-style: italic;
+        }
+
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            background-color: #11110f;
+
+            text-align: center;
+
+            padding: 30px;
+
+            color: #6e695f;
+
+            font-size: 14px;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* ---------- MOBILE ---------- */
+
+        @media (max-width: 750px) {
+
+            header {
+                height: 450px;
+            }
+
+
+            header h1 {
+                font-size: 40px;
+
+                letter-spacing: 4px;
+            }
+
+
+            header p {
+                font-size: 16px;
+            }
+
+
+            .book-section {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+
+            .characters {
+                grid-template-columns: 1fr;
+            }
+
+
+            .mystery {
+                padding: 30px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>
+            THE SILENT PATIENT
+        </h1>
+
+        <div class="header-line"></div>
+
+        <p>
+            Some stories are better left unheard.
+        </p>
+
+    </header>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="container">
+
+
+        <!-- BOOK INTRODUCTION -->
+
+        <section class="book-section">
+
+
+            <div class="book-cover">
+
+                <h2>
+
+                    THE<br>
+                    SILENT<br>
+                    PATIENT
+
+                </h2>
+
+            </div>
+
+
+
+            <div class="book-description">
+
+                <h2>
+                    The Story
+                </h2>
+
+
+                <p>
+                    Alicia Berenson appears to have a perfect life.
+                    She is a successful painter, married to a famous
+                    fashion photographer, and living in a beautiful
+                    London home.
+                </p>
+
+
+                <p>
+                    Until one evening, her husband is found dead.
+                </p>
+
+
+                <p>
+                    Alicia is accused of the murder.
+                    But instead of explaining what happened,
+                    she stops speaking completely.
+                </p>
+
+
+                <p>
+                    Not one word.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <div class="divider"></div>
+
+
+
+        <!-- QUOTE -->
+
+        <div class="quote">
+
+            <p>
+                "Her silence became the mystery."
+            </p>
+
+            <span>
+                THE SILENT PATIENT
+            </span>
+
+        </div>
+
+
+
+        <!-- ABOUT THE BOOK -->
+
+        <section class="about">
+
+            <h2>
+                About The Book
+            </h2>
+
+
+            <p>
+                <i>The Silent Patient</i> is a psychological thriller
+                written by Alex Michaelides. The story explores
+                obsession, trauma, relationships and the secrets
+                people keep hidden.
+            </p>
+
+
+            <p>
+                Theo Faber, a psychotherapist, becomes fascinated
+                by Alicia's case. He believes that if he can make
+                her speak, he may finally understand what happened
+                on the night of the murder.
+            </p>
+
+
+            <p>
+                But the deeper Theo looks into Alicia's past,
+                the more complicated the mystery becomes.
+            </p>
+
+        </section>
+
+
+
+        <div class="divider"></div>
+
+
+
+        <!-- CHARACTERS -->
+
+        <section>
+
+            <h2>
+                The Characters
+            </h2>
+
+
+            <div class="characters">
+
+
+                <div class="character">
+
+                    <h3>
+                        Alicia Berenson
+                    </h3>
+
+                    <p>
+                        A talented painter whose silence becomes
+                        the centre of a disturbing mystery.
+                    </p>
+
+                </div>
+
+
+
+                <div class="character">
+
+                    <h3>
+                        Theo Faber
+                    </h3>
+
+                    <p>
+                        A psychotherapist determined to understand
+                        Alicia and uncover the truth behind her silence.
+                    </p>
+
+                </div>
+
+
+
+                <div class="character">
+
+                    <h3>
+                        Gabriel Berenson
+                    </h3>
+
+                    <p>
+                        Alicia's husband, whose death changes
+                        everything.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <div class="divider"></div>
+
+
+
+        <!-- THEMES -->
+
+        <section>
+
+            <h2>
+                Themes
+            </h2>
+
+
+            <div class="themes">
+
+                <div class="theme">
+                    Silence
+                </div>
+
+                <div class="theme">
+                    Obsession
+                </div>
+
+                <div class="theme">
+                    Trauma
+                </div>
+
+                <div class="theme">
+                    Secrets
+                </div>
+
+                <div class="theme">
+                    Psychology
+                </div>
+
+                <div class="theme">
+                    Mystery
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- MYSTERY -->
+
+        <div class="mystery">
+
+            <h2>
+                THE QUESTION
+            </h2>
+
+
+            <p>
+                What really happened on the night Gabriel was killed?
+            </p>
+
+
+            <p>
+                Why did Alicia stop speaking?
+            </p>
+
+
+            <p class="question">
+                Sometimes silence says more than words ever could.
+            </p>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        A page dedicated to mystery, silence & secrets.
+
+    </footer>
+
+
+</body>
+
+</html>
+
