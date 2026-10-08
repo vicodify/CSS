@@ -1,0 +1,325 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Halloween Night 🎃</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: #090612;
+            color: #f5e9d8;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #0d0918;
+            border-bottom: 1px solid #2c1a3d;
+        }
+
+        nav h2 {
+            color: #ff7518;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: #d8c9e8;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #ff7518;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+
+            background:
+                radial-gradient(circle at 50% 30%, #301746 0%, #120b1d 40%, #090612 75%);
+        }
+
+        .moon {
+            width: 150px;
+            height: 150px;
+            background: #ffd98a;
+            border-radius: 50%;
+            box-shadow: 0 0 35px #ffb52e;
+            margin-bottom: 35px;
+            position: relative;
+        }
+
+        .moon::before {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background: #e5bc72;
+            border-radius: 50%;
+            top: 30px;
+            left: 35px;
+        }
+
+        .moon::after {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: #e5bc72;
+            border-radius: 50%;
+            bottom: 35px;
+            right: 30px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            color: #ff7518;
+            text-shadow: 0 0 15px #ff4d00;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #cdbbdd;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 13px 28px;
+            background: #ff7518;
+            color: #120b1d;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #ffad42;
+            transform: scale(1.05);
+        }
+
+        /* Cards */
+        .section {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #ff7518;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 250px;
+            padding: 30px 20px;
+            background: #120d1d;
+            border: 1px solid #352044;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #ff7518;
+            box-shadow: 0 0 20px #2e163b;
+        }
+
+        .card .emoji {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #ffad42;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #b9aac5;
+            line-height: 1.5;
+        }
+
+        /* Quote */
+        .quote {
+            background: #0d0918;
+            padding: 70px 20px;
+            text-align: center;
+            border-top: 1px solid #24152f;
+            border-bottom: 1px solid #24152f;
+        }
+
+        .quote p {
+            font-size: 1.6rem;
+            color: #e8d9ec;
+            font-style: italic;
+        }
+
+        .quote span {
+            display: block;
+            margin-top: 15px;
+            color: #ff7518;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #796c82;
+            background: #08050d;
+        }
+
+        footer span {
+            color: #ff7518;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero h1 {
+                font-size: 2.7rem;
+            }
+
+            .moon {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>🎃 SPOOKY</h2>
+
+        <div>
+            <a href="#home">Home</a>
+            <a href="#creatures">Creatures</a>
+            <a href="#quote">Night</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+
+        <div class="moon"></div>
+
+        <h1>Welcome to Halloween</h1>
+
+        <p>
+            The moon is glowing, the streets are quiet,
+            and something spooky is hiding in the shadows...
+        </p>
+
+        <a href="#creatures" class="button">
+            Enter the Darkness
+        </a>
+
+    </section>
+
+
+    <section class="section" id="creatures">
+
+        <h2>Creatures of the Night</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="emoji">🎃</div>
+                <h3>Jack-O'-Lantern</h3>
+                <p>
+                    A glowing symbol of Halloween that watches
+                    over the night.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">🧛</div>
+                <h3>Vampire</h3>
+                <p>
+                    Mysterious creatures that come alive
+                    when the sun disappears.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">🧙‍♀️</div>
+                <h3>Witch</h3>
+                <p>
+                    Brewing potions and casting spells
+                    beneath the moonlight.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">👻</div>
+                <h3>Ghost</h3>
+                <p>
+                    Strange whispers, empty hallways,
+                    and footsteps with no one there.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="quote" id="quote">
+
+        <p>
+            "When the moon is full, the shadows begin to whisper."
+        </p>
+
+        <span>— Halloween Night</span>
+
+    </section>
+
+
+    <footer>
+        Made with 🖤 & CSS <span>🎃</span>
+    </footer>
+
+</body>
+</html>
+```
